@@ -82,6 +82,9 @@ set t_Co=256
 let g:rehash256 = 1
 let g:molokai_original = 1
 colorscheme molokai
+" set background=dark
+" colorscheme solarized
+
 
 """"""""""""""""""""""
 "      Mappings      "
@@ -184,3 +187,30 @@ function! s:build_go_files()
     call go#cmd#Build(0)
   endif
 endfunction
+
+" disable arrow navigation
+" Remove newbie crutches in Normal Mode
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
+" Remove newbie crutches in Insert Mode
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
+inoremap <Up> <Nop>
+
+" Remove newbie crutches in Visual Mode
+vnoremap <Down> <Nop>
+vnoremap <Left> <Nop>
+vnoremap <Right> <Nop>
+vnoremap <Up> <Nop>
+
+" Neosnippets
+" Plugin key-mappings.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
